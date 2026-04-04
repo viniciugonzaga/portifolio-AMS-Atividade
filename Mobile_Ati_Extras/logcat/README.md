@@ -174,13 +174,6 @@ app/
     <li>Abrir um Pull Request</li>
 </ol>
 
-<h2>📄 Licença</h2>
-<p>Este projeto está sob a licença MIT - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
-
-<h2>📧 Contato</h2>
-<p>Seu Nome - <a href="https://twitter.com/seu_twitter">@seu_twitter</a> - email@exemplo.com</p>
-<p>Link do Projeto: <a href="https://github.com/seu-usuario/logcat-button">https://github.com/seu-usuario/logcat-button</a></p>
-
 <h2>🙏 Agradecimentos</h2>
 <ul>
     <li>Android Documentation</li>
