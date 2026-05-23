@@ -1,189 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>⚡ ShowTracker - App Rastreador de Shows</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f6f6f9;
+        }
+        h1 {
+            color: #6200EE;
+            border-bottom: 3px solid #3700B3;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        h2 {
+            color: #3700B3;
+            margin-top: 30px;
+            border-left: 5px solid #6200EE;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #1C1B1F;
+        }
+        .screenshot {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin: 20px 0;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin: 15px 0;
+            border-left: 4px solid #6200EE;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+            color: #6200EE;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #6200EE;
+            color: white;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #2d3748;
+            color: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .tech-badge {
+            display: inline-block;
+            background-color: #EADDFF;
+            color: #21005D;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 5px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
 
-
-<h1>📱 LogCat Button - App Educativo Android</h1>
+<h1>⚡ ShowTracker - App Rastreador de Shows</h1>
 
 <div class="screenshot">
-    <img src="imagem.png" alt="LogCat Button App Screenshot">
-    <p><em>Tela principal do aplicativo LogCat Button</em></p>
+    <div style="background: linear-gradient(135deg, #6200EE, #3700B3); color: white; padding: 40px; border-radius: 8px; font-weight: bold; font-size: 1.5em;">
+        🎵 [Interface do ShowTracker] 🎸<br>
+        <span style="font-size: 0.6em; font-weight: normal; opacity: 0.8;">Todos os Shows | Meus Favoritos ❤️</span>
+    </div>
+    <p><em>Mockup da interface e fluxo visual do aplicativo ShowTracker</em></p>
 </div>
 
 <h2>📋 Sobre o Projeto</h2>
-<p>O <strong>LogCat Button</strong> é um aplicativo educativo desenvolvido em Kotlin com Jetpack Compose que demonstra o uso do sistema de logs do Android (LogCat). O app permite que os usuários insiram seus nomes e avaliem seu desempenho através de botões coloridos, cada um registrando mensagens em diferentes níveis de log.</p>
+<p>O <strong>ShowTracker</strong> é um aplicativo Android básico e funcional desenvolvido em Kotlin utilizando o framework moderno <strong>Jetpack Compose</strong>. O projeto serve como um guia prático para desenvolvedores iniciantes, demonstrando como criar uma aplicação interativa que gerencia estados locais de forma eficiente, realiza filtragens complexas e se comunica com o ecossistema Android abrindo navegadores externos, tudo sem a necessidade imediata de dependências complexas de APIs online.</p>
 
 <div class="container">
-    <strong>🎯 Objetivo Educacional:</strong> Ensinar na prática como utilizar os diferentes níveis de log do Android para depuração e monitoramento de aplicações.
+    <strong>🎯 Objetivo Prático:</strong> Ensinar arquitetura em Compose, manipulação de estados mutáveis (State), filtragem dinâmica em tempo real (Search/Chips) e gerenciamento de listas dinâmicas com Lazy layouts.
 </div>
 
-<h2>🎯 Funcionalidades</h2>
+<h2>🎯 Funcionalidades Implementadas</h2>
 <ul class="feature-list">
-    <li><strong>Campo de entrada</strong> para o nome do usuário</li>
-    <li><strong>4 botões de avaliação</strong> (I, R, B, MB) com cores distintas</li>
-    <li><strong>Sistema de logs</strong> demonstrando diferentes níveis de severidade</li>
-    <li><strong>Feedback visual</strong> animado para cada ação</li>
-    <li><strong>Design moderno</strong> com animações e gradientes</li>
-    <li><strong>Interface responsiva</strong> e intuitiva</li>
+    <li><strong>Banner de Destaque da Semana:</strong> Um card estilizado no topo com fundo escuro e gradiente destacando o principal evento.</li>
+    <li><strong>Barra de Pesquisa Dinâmica:</strong> Filtra a listagem instantaneamente à medida que o usuário digita o nome de um artista ou cidade.</li>
+    <li><strong>Filtro Rápido por Cidades (Filter Chips):</strong> Carrossel horizontal com botões clicáveis para filtrar shows por capitais com um único toque.</li>
+    <li><strong>Navegação por Abas (TabRow):</strong> Divisão intuitiva entre a lista de "Todos os Shows" e a tela exclusiva de "Meus Favoritos ❤️".</li>
+    <li><strong>Lógica de Favoritar (Persistência em Memória):</strong> Botões de coração com animação de mudança de cor que atualizam o estado do item em tempo real.</li>
+    <li><strong>Integração com Navegador (Intent de Compra):</strong> Redireciona o usuário para as bilheterias oficiais (Ticketmaster, Eventim, Sympla) de forma transparente.</li>
 </ul>
 
-<h2>🎨 Cores dos Botões e Significados</h2>
+<h2>🎨 Dados Estruturados do App (Mock)</h2>
+<p>Como o app funciona offline sem API, os dados foram estruturados de forma fixa para simular um catálogo real de eventos:</p>
 <table>
     <thead>
-        <tr><th>Botão</th><th>Significado</th><th>Cor</th><th>Nível do Log</th></tr>
+        <tr><th>Artista / Evento</th><th>Cidade</th><th>Localização / Arena</th><th>Data Prevista</th><th>Plataforma de Compra</th></tr>
     </thead>
     <tbody>
-        <tr><td><strong>I</strong></td><td>Insuficiente</td><td style="background-color:#e74c3c; color:white;">🔴 Vermelho</td><td><code>Log.e()</code> - Error</td></tr>
-        <tr><td><strong>R</strong></td><td>Regular</td><td style="background-color:#f39c12; color:white;">🟠 Laranja</td><td><code>Log.w()</code> - Warning</td></tr>
-        <tr><td><strong>B</strong></td><td>Bom</td><td style="background-color:#27ae60; color:white;">🟢 Verde</td><td><code>Log.d()</code> - Debug</td></tr>
-        <tr><td><strong>MB</strong></td><td>Muito Bom</td><td style="background-color:#3498db; color:white;">🔵 Azul</td><td><code>Log.i()</code> - Info</td></tr>
+        <tr><td><strong>Rock in Rio 2026</strong></td><td>Rio de Janeiro</td><td>Cidade do Rock</td><td>Setembro/2026</td><td><span class="badge" style="background-color:#6200EE;">Destaque</span></td></tr>
+        <tr><td><strong>Coldplay</strong></td><td>São Paulo</td><td>Estádio do MorumBIS</td><td>25/10/2026</td><td>Ticketmaster</td></tr>
+        <tr><td><strong>Taylor Swift</strong></td><td>Rio de Janeiro</td><td>Estádio Nilton Santos</td><td>12/11/2026</td><td>Eventim</td></tr>
+        <tr><td><strong>Vintage Culture</strong></td><td>Belo Horizonte</td><td>Mineirão</td><td>05/12/2026</td><td>Sympla</td></tr>
+        <tr><td><strong>Iron Maiden</strong></td><td>São Paulo</td><td>Allianz Parque</td><td>18/12/2026</td><td>Livepass</td></tr>
+        <tr><td><strong>Anitta</strong></td><td>Salvador</td><td>Arena Fonte Nova</td><td>20/01/2027</td><td>Ticketmaster</td></tr>
+        <tr><td><strong>Alok</strong></td><td>Florianópolis</td><td>P12</td><td>31/12/2026</td><td>Sympla</td></tr>
     </tbody>
 </table>
 
-<h2>📝 Como Funciona o LogCat</h2>
-<p>O LogCat é uma ferramenta do Android Studio que exibe mensagens de log do sistema e dos aplicativos. Este projeto demonstra 4 níveis principais:</p>
+<h2>📝 Como Funciona a Lógica de Estados (Jetpack Compose)</h2>
+<p>O aplicativo reage dinamicamente a três estados fundamentais manipulados via <code>remember { mutableStateOf() }</code>:</p>
 
-<h3>Níveis de Log Utilizados:</h3>
+<h3>Estados Principais Monitorados:</h3>
 
 <div class="container">
-    <h4>1. Log.e() - Error</h4>
-    <p>Usado para situações de erro</p>
-    <code>Log.e("TesteAndroid", "App: João - Nota I")</code>
-    <p><span class="badge" style="background-color:#e74c3c;">🔴 Cor: Vermelha no LogCat</span></p>
+    <h4>1. Estado de Pesquisa (String)</h4>
+    <p>Captura a string digitada na barra de busca e recalcula a lista visível.</p>
+    <code>var pesquisa by remember { mutableStateOf("") }</code>
 </div>
 
 <div class="container">
-    <h4>2. Log.w() - Warning</h4>
-    <p>Usado para avisos</p>
-    <code>Log.w("TesteAndroid", "App: Maria - Nota R")</code>
-    <p><span class="badge" style="background-color:#f39c12;">🟠 Cor: Laranja no LogCat</span></p>
+    <h4>2. Estado da Aba Selecionada (Int)</h4>
+    <p>Controla se o feed renderizará todos os shows ou apenas os favoritados.</p>
+    <code>var abaSelecionada by remember { mutableIntStateOf(0) }</code>
 </div>
 
 <div class="container">
-    <h4>3. Log.d() - Debug</h4>
-    <p>Usado para informações de depuração</p>
-    <code>Log.d("TesteAndroid", "App: Pedro - Nota B")</code>
-    <p><span class="badge" style="background-color:#27ae60;">🟢 Cor: Verde no LogCat</span></p>
+    <h4>3. Estado de Filtro de Cidade (String)</h4>
+    <p>Armazena qual Chip de cidade está ativo para a triagem secundária.</p>
+    <code>var cidadeSelecionada by remember { mutableStateOf("Todas") }</code>
 </div>
-
-<div class="container">
-    <h4>4. Log.i() - Info</h4>
-    <p>Usado para informações gerais</p>
-    <code>Log.i("TesteAndroid", "App: Ana - Nota MB")</code>
-    <p><span class="badge" style="background-color:#3498db;">🔵 Cor: Azul no LogCat</span></p>
-</div>
-
-<h3>Como Visualizar os Logs:</h3>
-<ol>
-    <li>Abra o <strong>LogCat</strong> no Android Studio (View → Tool Windows → Logcat)</li>
-    <li>Filtre pela tag <code>TesteAndroid</code></li>
-    <li>Execute o app e clique nos botões</li>
-    <li>Observe as mensagens aparecendo em diferentes cores</li>
-</ol>
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 <div>
-    <span class="tech-badge">🎯 Kotlin</span>
+    <span class="tech-badge">🎯 Kotlin 1.9+</span>
     <span class="tech-badge">⚡ Jetpack Compose</span>
     <span class="tech-badge">🎨 Material Design 3</span>
-    <span class="tech-badge">🔄 Coroutines</span>
-    <span class="tech-badge">📱 Android LogCat</span>
+    <span class="tech-badge">📱 Android SDK 21+</span>
+    <span class="tech-badge">🗺️ Android Intents</span>
 </div>
 
-<h2>📦 Estrutura do Projeto</h2>
+<h2>📦 Estrutura de Arquivos Criada</h2>
 <pre>
-app/
-├── src/main/java/com/example/logcatbutton/
-│   ├── MainActivity.kt          # Activity principal e UI
-│   └── ui/theme/                # Configurações de tema
-│       ├── Color.kt             # Cores personalizadas
-│       ├── Theme.kt             # Tema do app
-│       └── Type.kt              # Tipografia
-└── src/main/res/
-    └── drawable/                # Recursos de imagem
-        └── eteclogo.png         # Logo do app
+myapplication/
+├── src/main/java/com/example/myapplication/
+│   ├── MainActivity.kt        # Interface Visual (UI), Abas, Chips e Eventos
+│   ├── Show.kt                # Data Class (Modelo de dados do Show)
+│   ├── ShowRepository.kt      # Objeto de repositório com os dados simulados (Mock)
+│   └── ui/theme/              # Cores, Tipografia e Tema padrão do Material 3
 </pre>
 
-<h2>🚀 Como Executar</h2>
-
-<h3>Pré-requisitos:</h3>
-<ul>
-    <li>Android Studio Hedgehog ou superior</li>
-    <li>SDK Android 21 (Lollipop) ou superior</li>
-    <li>Kotlin 1.9.0 ou superior</li>
-</ul>
-
-<h3>Passos:</h3>
+<h2>🚀 Como Gerar o APK para o Celular</h2>
 <ol>
-    <li>
-        <strong>Clone o repositório</strong>
-        <pre><code>git clone https://github.com/seu-usuario/logcat-button.git</code></pre>
-    </li>
-    <li>
-        <strong>Abra no Android Studio</strong>
-        <p>File → Open → Selecione a pasta do projeto</p>
-    </li>
-    <li>
-        <strong>Sincronize as dependências</strong>
-        <p>File → Sync Project with Gradle Files</p>
-    </li>
-    <li>
-        <strong>Execute o app</strong>
-        <p>Conecte um dispositivo Android ou inicie um emulador e clique no botão "Run" (▶️)</p>
-    </li>
+    <li>No menu superior do Android Studio, clique em <strong>Build</strong>.</li>
+    <li>Selecione <strong>Build Bundle(s) / APK(s)</strong> &rarr; <strong>Build APK(s)</strong>.</li>
+    <li>Aguarde o Gradle finalizar o processo (acompanhe na barra inferior).</li>
+    <li>Quando a notificação aparecer no canto inferior direito, clique em <strong>Locate</strong>.</li>
+    <li>Envie o arquivo <code>app-debug.apk</code> para o seu smartphone e instale!</li>
 </ol>
-
-<h2>💡 Exemplo de Uso</h2>
-<ol>
-    <li>Digite seu nome no campo de texto</li>
-    <li>Clique em um dos botões de avaliação (I, R, B ou MB)</li>
-    <li>Observe:
-        <ul>
-            <li><strong>Feedback visual</strong> na tela confirmando a ação</li>
-            <li><strong>Mensagem no LogCat</strong> com o formato: <code>App: [nome] - Nota [avaliação]</code></li>
-            <li><strong>Cor diferente</strong> no LogCat dependendo do nível</li>
-        </ul>
-    </li>
-</ol>
-
-<h3>Exemplo de Saída no LogCat:</h3>
-<pre>
-2024-01-15 14:30:25.123 E/TesteAndroid: App: João - Nota I
-2024-01-15 14:30:28.456 W/TesteAndroid: App: João - Nota R
-2024-01-15 14:30:31.789 D/TesteAndroid: App: João - Nota B
-2024-01-15 14:30:35.012 I/TesteAndroid: App: João - Nota MB
-</pre>
-
-<h2>🎯 Objetivos Educacionais</h2>
-<p>Este projeto foi desenvolvido para demonstrar:</p>
-<ul class="feature-list">
-    <li>Uso prático do sistema de logs do Android</li>
-    <li>Diferenças entre níveis de log (Error, Warning, Debug, Info)</li>
-    <li>Desenvolvimento UI com Jetpack Compose</li>
-    <li>Gerenciamento de estado em Compose</li>
-    <li>animações e feedback visual</li>
-    <li>Boas práticas de programação Android</li>
-</ul>
-
-<h2>🤝 Contribuição</h2>
-<p>Contribuições são bem-vindas! Sinta-se à vontade para:</p>
-<ol>
-    <li>Fazer um Fork do projeto</li>
-    <li>Criar uma branch para sua feature (<code>git checkout -b feature/AmazingFeature</code>)</li>
-    <li>Commit suas mudanças (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
-    <li>Push para a branch (<code>git push origin feature/AmazingFeature</code>)</li>
-    <li>Abrir um Pull Request</li>
-</ol>
-
-<h2>🙏 Agradecimentos</h2>
-<ul>
-    <li>Android Documentation</li>
-    <li>Jetpack Compose Team</li>
-    <li>Material Design Team</li>
-</ul>
 
 <div class="footer">
-    <p>⭐️ Desenvolvido para fins educacionais - Demonstrando o uso do LogCat no Android!</p>
-    <p>© 2024 LogCat Button - Todos os direitos reservados</p>
+    <p>🎸 Desenvolvido para fins de aprendizado prático em arquitetura e componentização Android Mobile!</p>
+    <p>© 2026 ShowTracker Project - Projetado com Jetpack Compose</p>
 </div>
 
 </body>
