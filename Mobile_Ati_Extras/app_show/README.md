@@ -5,7 +5,11 @@
 
 <h1>⚡ ShowTracker - App Rastreador de Shows</h1>
 
-<img src= "print_aplicativo.jpg"
+<div class="screenshot">
+    <img src="print_aplicativo.jpg" alt="LogCat Button App Screenshot">
+    <p><em>Tela principal do aplicativo LogCat Button</em></p>
+</div>
+
 <div class="screenshot">
     <div style="background: linear-gradient(135deg, #6200EE, #3700B3); color: white; padding: 40px; border-radius: 8px; font-weight: bold; font-size: 1.5em;">
         🎵 [Interface do ShowTracker] 🎸<br>
