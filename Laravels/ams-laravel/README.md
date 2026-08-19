@@ -6,10 +6,6 @@
 - **users** → **posts** (1:N)  
 - **posts** ↔ **tags** (N:M) com tabela pivô `post_tag`
 
-## Diagrama simplificado
-
-![Diagrama](diagram.png)  <!-- opcional -->
-
 ## Como executar
 
 1. Configurar `.env` com o banco `ams_laravel_db`
