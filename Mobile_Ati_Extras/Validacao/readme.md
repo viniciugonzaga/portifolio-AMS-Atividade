@@ -47,6 +47,3 @@ O projeto segue o padrão **MVVM (Model-View-ViewModel)** com separação clara 
 - **Navigation**  
   Roteamento gerenciado pelo `NavHost` com rotas `"login"`, `"signup"` e `"home"`. O destino inicial é definido dinamicamente com base no `AuthState`.
 
----
-
-## 📁 Estrutura de Diretórios
