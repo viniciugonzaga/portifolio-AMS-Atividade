@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685903052959",
+    "project_id": "sociologiaapp",
+    "storage_bucket": "sociologiaapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685903052959:android:4bdb77bbe35b6e336522aa",
+        "android_client_info": {
+          "package_name": "com.example.android_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKKVrh6xOOdXtlJEhs5eYn1T3mCUVIDcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
