@@ -28,8 +28,3 @@ Facilitar o acompanhamento de editais de concursos docentes, permitindo cadastra
 4.  Baixe o arquivo `google-services.json` e coloque-o na pasta `app/` do projeto.
 5.  Sincronize o projeto com o Gradle (**File > Sync Project with Gradle Files**).
 6.  Execute o aplicativo em um emulador ou dispositivo físico.
-
-## 🎥 Vídeo de Explicação
-- **Link do Vídeo:** [Insira aqui o link do seu vídeo do YouTube ou Google Drive]
-
-O vídeo demonstra a configuração do Firebase, a explicação do código e o funcionamento do CRUD em tempo real no aplicativo e no console do Firestore.
