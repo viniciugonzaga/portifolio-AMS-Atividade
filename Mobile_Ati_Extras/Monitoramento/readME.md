@@ -17,6 +17,14 @@ Facilitar o acompanhamento de editais de concursos docentes, permitindo cadastra
 - **Excluir** um concurso.
 - **Sincronização em Tempo Real:** A lista é atualizada automaticamente com as mudanças no Firestore.
 
+## 📸 Demonstração Visual
+
+| Tela Principal do App | Banco de Dados (Firebase Firestore) |
+| :---: | :---: |
+| ![Tela do Aplicativo](imagem1.png) | ![Firebase Firestore](imagem2.png) |
+
+*(Legenda: À esquerda, a interface do aplicativo para cadastro. À direita, os dados salvos e sincronizados no console do Firebase.)*
+
 ## 🗄️ Estrutura do Banco de Dados (Firestore)
 - **Coleção:** `concursos`
 - **Documento:** Contém os campos: `faculdade`, `disciplina`, `banca`, `dataProva`.
