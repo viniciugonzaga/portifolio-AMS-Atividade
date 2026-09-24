@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MonitoramentoConcursos</string>
+    <string name="titulo_app">Monitoramento de Concursos</string>
+    <string name="hint_faculdade">Faculdade Regional</string>
+    <string name="hint_disciplina">Disciplina</string>
+    <string name="hint_banca">Banca Examinadora</string>
+    <string name="hint_data">Data da Prova (DD/MM/AAAA)</string>
+    <string name="label_faculdade">Faculdade</string>
+    <string name="label_disciplina">Disciplina</string>
+    <string name="label_banca">Banca</string>
+    <string name="label_data">Data</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_atualizar">Atualizar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_editar">Editar</string>
+    <string name="btn_excluir">Excluir</string>
+    <string name="msg_preencha_campos">Preencha todos os campos</string>
+    <string name="msg_concurso_cadastrado">Concurso cadastrado!</string>
+    <string name="msg_concurso_atualizado">Concurso atualizado!</string>
+    <string name="msg_concurso_excluido">Concurso excluído!</string>
+    <string name="msg_erro">Erro: %1$s</string>
+    <string name="msg_erro_carregar">Erro ao carregar: %1$s</string>
+    <string name="msg_erro_excluir">Erro ao excluir: %1$s</string>
+</resources>
